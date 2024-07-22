@@ -48,7 +48,7 @@ CENTER = ((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))
 class GameObject:
     """Класс описывает игровые объекты на поле."""
 
-    def __init__(self, body_color):
+    def __init__(self, body_color=None):
         self.position = CENTER
         self.body_color = body_color
 
@@ -64,7 +64,7 @@ class GameObject:
 class Apple(GameObject):
     """Класс описывает Яблоко. Родительский класс — GameObject."""
 
-    def __init__(self, body_color):
+    def __init__(self, body_color=None):
         super().__init__(body_color)
 
     def draw(self):
@@ -91,7 +91,7 @@ class Apple(GameObject):
 class Snake(GameObject):
     """Класс описывает Змею. Родительский класс — GameObject."""
 
-    def __init__(self, body_color):
+    def __init__(self, body_color=None):
         super().__init__(body_color)
         self.reset()
         self.last = None
